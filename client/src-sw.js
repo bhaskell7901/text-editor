@@ -38,3 +38,12 @@ registerRoute(
     ]
   })
 );
+
+offlineFallback({
+  fallbackURL: '/offline.html',
+  plugins: [
+    new OfflineFallbackPlugin({
+      statuses: [0, 200],
+    }),
+  ],
+});
